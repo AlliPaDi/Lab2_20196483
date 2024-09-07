@@ -11,7 +11,10 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -20,9 +23,506 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
+            app:buttonGravity="top"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/antenna"
+                android:layout_width="241dp"
+                android:layout_height="300dp"
+                app:srcCompat="@drawable/antenna_sinfondo" />
+
+            <ImageView
+                android:id="@+id/cabeza"
+                android:layout_width="66dp"
+                android:layout_height="47dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="191dp"
+                android:layout_marginTop="69dp"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginBottom="189dp"
+                app:srcCompat="@drawable/head1_sinfondo"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/torso"
+                android:layout_width="27dp"
+                android:layout_height="88dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="202dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="102dp"
+                app:srcCompat="@drawable/torso_sinfondo"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/brazoizq"
+                android:layout_width="54dp"
+                android:layout_height="41dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="162dp"
+                android:layout_marginTop="114dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="145dp"
+                app:srcCompat="@drawable/brazoizq_piernadere_sinfondo"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/piernaizq"
+                android:layout_width="58dp"
+                android:layout_height="48dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="163dp"
+                android:layout_marginTop="187dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="65dp"
+                app:srcCompat="@drawable/brazodere_piernaizq_sinfondo"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/brazoder"
+                android:layout_width="73dp"
+                android:layout_height="43dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="203dp"
+                android:layout_marginTop="112dp"
+                android:layout_marginEnd="-35dp"
+                android:layout_marginBottom="145dp"
+                app:srcCompat="@drawable/brazodere_piernaizq_sinfondo"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/piernader"
+                android:layout_width="61dp"
+                android:layout_height="67dp"
+                android:layout_alignStart="@+id/antenna"
+                android:layout_alignEnd="@+id/antenna"
+                android:layout_alignBottom="@+id/antenna"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="175dp"
+                android:layout_marginEnd="-30dp"
+                android:layout_marginBottom="58dp"
+                app:srcCompat="@drawable/brazoizq_piernadere_sinfondo"
+                android:visibility="invisible"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/palabras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="244dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonA"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="A"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
+
+                <Button
+                    android:id="@+id/buttonB"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="B"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
+
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="C"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonD"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="D"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonE"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="E"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonF"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="F"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonG"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="G"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonH"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="H"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonI"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="I"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonJ"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="J"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonK"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="K"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonL"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="L"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonM"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="M"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonN"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="N"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonO"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="O"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonP"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="P"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonQ"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="Q"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonR"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="R"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonS"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="S"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonT"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="T"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonU"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="U"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/buttonV"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="V"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonW"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="W"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonX"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="X"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonY"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="Y"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/buttonZ"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:onClick="onLetraSeleccionada"
+                    android:paddingHorizontal="0dp"
+                    android:text="Z"
+                    android:textSize="16sp"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/design_default_color_primary"
+                    app:cornerRadius="8dp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNuevoJuego"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="Nuevo Juego"
+            android:textSize="22sp" />
 
 
     </LinearLayout>
