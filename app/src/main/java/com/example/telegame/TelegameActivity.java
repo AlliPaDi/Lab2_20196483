@@ -23,6 +23,9 @@ public class TelegameActivity extends AppCompatActivity {
     private Random random;
     private String palabraAct;
     private LinearLayout palabraLayout;
+    private LinearLayout mensajeLayout;
+    private long tiempoInicio;
+    private long tiempoFin;
     private int cantErrores;
 
     @Override
@@ -46,7 +49,9 @@ public class TelegameActivity extends AppCompatActivity {
         // Obtener lista de palabras
         palabras = getResources().getStringArray(R.array.palabras);
         palabraLayout = findViewById(R.id.palabras);
-        random = new Random(); // ANALIZAR
+        random = new Random();
+
+        mensajeLayout = findViewById(R.id.mensaje);
 
         iniciarNuevoJuego();
 
@@ -77,11 +82,14 @@ public class TelegameActivity extends AppCompatActivity {
         disblockAllBTns();
         palabraEscogida();
         generarGuiones(palabraAct);
+
+        tiempoInicio = System.currentTimeMillis();
     }
 
     // Boton nuevo juego
     public void onNuevoJuego(View view){
         cantErrores = 0;
+        mensajeLayout.removeAllViews();
         iniciarNuevoJuego();
     }
 
@@ -109,13 +117,40 @@ public class TelegameActivity extends AppCompatActivity {
 
     // Cambiar guion por letra
     private void actualizarGuiones(char letra) {
+        boolean palabraCompleta = true;
+
         for (int i = 0; i < palabraAct.length(); i++) {
             if (palabraAct.charAt(i) == letra) {
                 TextView guion = (TextView) palabraLayout.getChildAt(i);
                 guion.setText(String.valueOf(letra));
             }
+
+            // Verificar si hay guiones restantes
+            TextView guion = (TextView) palabraLayout.getChildAt(i);
+            if (guion.getText().equals("_")) {
+                palabraCompleta = false; // Todavía hay letras por adivinar
+            }
+        }
+
+        if (palabraCompleta) {
+            finDelJuego(); // Llama a la función para finalizar el juego
         }
     }
+
+    private void finDelJuego() {
+        tiempoFin = System.currentTimeMillis();
+        long tiempoTotal = (tiempoFin - tiempoInicio) / 1000;
+
+        // Mostrar mensaje de victoria al usuario:
+
+        TextView msjWin = new TextView(this);
+        msjWin.setText("Ganó / Terminó en " + tiempoTotal + "s" );
+        msjWin.setTextSize(18);
+        msjWin.setPadding(5, 5, 5, 5);
+
+        mensajeLayout.addView(msjWin);
+    }
+
 
     // Obtenemos el valor del botón y vemos si pertenece a la palabra
     public void onLetraSeleccionada(View view) {
@@ -155,7 +190,14 @@ public class TelegameActivity extends AppCompatActivity {
             ImageView piernader = findViewById(R.id.piernader);
             piernader.setVisibility(View.VISIBLE);
             blockAllBTns();
-            //MOSTRAR MENSAJE DE Q SE PERDIÓ
+
+            // mostrar mensaje de que perdió
+            TextView msjLost = new TextView(this);
+            msjLost.setText("Perdió");
+            msjLost.setTextSize(18);
+            msjLost.setPadding(5, 5, 5, 5);
+
+            mensajeLayout.addView(msjLost);
         }
     }
 

@@ -145,7 +145,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="244dp">
+            android:layout_height="222dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -180,6 +180,7 @@
 
                 <Button
                     android:id="@+id/buttonC"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -187,12 +188,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="C"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonD"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -200,12 +201,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="D"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonE"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -213,12 +214,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="E"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonF"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -226,12 +227,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="F"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonG"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -239,9 +240,8 @@
                     android:paddingHorizontal="0dp"
                     android:text="G"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
             </TableRow>
 
             <TableRow
@@ -251,6 +251,7 @@
 
                 <Button
                     android:id="@+id/buttonH"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -258,12 +259,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="H"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonI"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -271,12 +272,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="I"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonJ"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -284,12 +285,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="J"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonK"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -297,12 +298,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="K"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonL"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -310,12 +311,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="L"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonM"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -323,12 +324,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="M"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonN"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -336,9 +337,8 @@
                     android:paddingHorizontal="0dp"
                     android:text="N"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
             </TableRow>
 
             <TableRow
@@ -348,6 +348,7 @@
 
                 <Button
                     android:id="@+id/buttonO"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -355,12 +356,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="O"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonP"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -368,12 +369,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="P"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonQ"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -381,12 +382,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="Q"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonR"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -394,12 +395,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="R"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonS"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -407,25 +408,25 @@
                     android:paddingHorizontal="0dp"
                     android:text="S"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonT"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
                     android:onClick="onLetraSeleccionada"
                     android:paddingHorizontal="0dp"
                     android:text="T"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
                     android:textSize="16sp"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonU"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -433,9 +434,8 @@
                     android:paddingHorizontal="0dp"
                     android:text="U"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
             </TableRow>
 
             <TableRow
@@ -445,6 +445,7 @@
 
                 <Button
                     android:id="@+id/buttonV"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -452,12 +453,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="V"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonW"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -465,12 +466,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="W"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonX"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -478,12 +479,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="X"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonY"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -491,12 +492,12 @@
                     android:paddingHorizontal="0dp"
                     android:text="Y"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
                 <Button
                     android:id="@+id/buttonZ"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="52dp"
                     android:layout_height="48dp"
                     android:layout_margin="1dp"
@@ -504,13 +505,22 @@
                     android:paddingHorizontal="0dp"
                     android:text="Z"
                     android:textSize="16sp"
-                    style="?attr/materialButtonOutlinedStyle"
-                    app:strokeColor="@color/design_default_color_primary"
-                    app:cornerRadius="8dp" />
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/design_default_color_primary" />
 
             </TableRow>
 
         </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp">
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/newGame"
