@@ -13,8 +13,13 @@
         android:theme="@style/Theme.TeleGame"
         tools:targetApi="31">
         <activity
+            android:name=".Estadisticas"
+            android:exported="false"
+            android:parentActivityName=".TelegameActivity"/>
+        <activity
             android:name=".TelegameActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
