@@ -52,7 +52,6 @@ public class TelegameActivity extends AppCompatActivity {
         mensajeLayout = findViewById(R.id.mensaje);
 
         iniciarNuevoJuego();
-
     }
 
 
@@ -68,8 +67,8 @@ public class TelegameActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.estadisticas) {
             Intent intent = new Intent(this, Estadisticas.class);
-            intent.putStringArrayListExtra("resultados", new ArrayList<>(resultados));
             intent.putExtra("nombre", getIntent().getStringExtra("nombre"));
+            intent.putStringArrayListExtra("resultados", new ArrayList<>(resultados));
             startActivity(intent);
             return true;
         }
@@ -136,12 +135,12 @@ public class TelegameActivity extends AppCompatActivity {
             // Verificar si hay guiones restantes
             TextView guion = (TextView) palabraLayout.getChildAt(i);
             if (guion.getText().equals("_")) {
-                palabraCompleta = false; // Todavía hay letras por adivinar
+                palabraCompleta = false;
             }
         }
 
         if (palabraCompleta) {
-            finDelJuego(); // Llama a la función para finalizar el juego
+            finDelJuego();
         }
     }
 
@@ -168,7 +167,6 @@ public class TelegameActivity extends AppCompatActivity {
         Button button = (Button) view;
         char letra = button.getText().charAt(0);
         button.setEnabled(false);
-
 
         if (palabraAct.indexOf(letra) >= 0) {
             actualizarGuiones(letra);
