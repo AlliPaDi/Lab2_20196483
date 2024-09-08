@@ -11,7 +11,11 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -23,6 +27,53 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Estadísticas"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lista"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/listaResultados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNuevoJuego"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="Nuevo Juego"
+            android:textSize="22sp" />
 
     </LinearLayout>
 

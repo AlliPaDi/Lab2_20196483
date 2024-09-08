@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class TelegameActivity extends AppCompatActivity {
@@ -27,6 +29,9 @@ public class TelegameActivity extends AppCompatActivity {
     private long tiempoInicio;
     private long tiempoFin;
     private int cantErrores;
+    private int numJuego = 1;
+    private List<String> resultados = new ArrayList<>();
+    private boolean juegoEnProgreso = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +44,6 @@ public class TelegameActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Obtener el Intent que inició esta actividad
-//        Intent intent = getIntent();
-        // Obtener el nombre del jugador
-//        String nombre = intent.getStringExtra("nombre");
-
-
-        // Juego
         // Obtener lista de palabras
         palabras = getResources().getStringArray(R.array.palabras);
         palabraLayout = findViewById(R.id.palabras);
@@ -70,6 +68,8 @@ public class TelegameActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.estadisticas) {
             Intent intent = new Intent(this, Estadisticas.class);
+            intent.putStringArrayListExtra("resultados", new ArrayList<>(resultados));
+            intent.putExtra("nombre", getIntent().getStringExtra("nombre"));
             startActivity(intent);
             return true;
         }
@@ -78,6 +78,7 @@ public class TelegameActivity extends AppCompatActivity {
 
     // Método para iniciar un nuevo juego
     private void iniciarNuevoJuego() {
+        juegoEnProgreso = true;
         ocultarPersona();
         disblockAllBTns();
         palabraEscogida();
@@ -88,6 +89,13 @@ public class TelegameActivity extends AppCompatActivity {
 
     // Boton nuevo juego
     public void onNuevoJuego(View view){
+        if(juegoEnProgreso){
+            String result = "Juego" + numJuego + ": Canceló";
+            resultados.add(result);
+            numJuego++;
+            juegoEnProgreso = false;
+        }
+
         cantErrores = 0;
         mensajeLayout.removeAllViews();
         iniciarNuevoJuego();
@@ -103,7 +111,7 @@ public class TelegameActivity extends AppCompatActivity {
 
     // Generar guiones de acuerdo al tamaño de la palabra
     private void generarGuiones(String palabra) {
-        palabraLayout.removeAllViews(); // Limpiar el layout por si se está generando una nueva palabra
+        palabraLayout.removeAllViews();
 
         for (int i = 0; i < palabra.length(); i++) {
             TextView guion = new TextView(this);
@@ -140,9 +148,12 @@ public class TelegameActivity extends AppCompatActivity {
     private void finDelJuego() {
         tiempoFin = System.currentTimeMillis();
         long tiempoTotal = (tiempoFin - tiempoInicio) / 1000;
+        String result = "Juego " + numJuego + ": Terminó en " + tiempoTotal + "s";
+        resultados.add(result);
+        numJuego++;
+        juegoEnProgreso = false;
 
         // Mostrar mensaje de victoria al usuario:
-
         TextView msjWin = new TextView(this);
         msjWin.setText("Ganó / Terminó en " + tiempoTotal + "s" );
         msjWin.setTextSize(18);
@@ -190,6 +201,11 @@ public class TelegameActivity extends AppCompatActivity {
             ImageView piernader = findViewById(R.id.piernader);
             piernader.setVisibility(View.VISIBLE);
             blockAllBTns();
+
+            String result = "Juego " + numJuego + ": Perdió";
+            resultados.add(result);
+            numJuego++;
+            juegoEnProgreso = false;
 
             // mostrar mensaje de que perdió
             TextView msjLost = new TextView(this);
